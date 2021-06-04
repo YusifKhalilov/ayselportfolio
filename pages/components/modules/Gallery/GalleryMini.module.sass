@@ -1,0 +1,51 @@
+.galleryMiniMain
+	background: #171818
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	width: 100vw
+	max-height: 100px
+	overflow-y: scroll
+	text-align: center
+	padding: 25px 20px 50px
+	border-radius: 30px 30px 0 0
+	transition: max-height 1s ease
+	&:hover
+		max-height: calc( 100vh -  120px)
+
+.thumbs
+	display: inline-block
+	min-width: 200px
+	max-width: 200px
+	max-height: 100px
+	text-align: center
+	object-fit: cover
+	background: black
+	overflow: hidden
+	border-radius: 10px
+	cursor: pointer
+	margin: 10px
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	transition: all 1s ease
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
+	&:hover
+		box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px
+
+.header
+	top: 0
+	height: 30px
+	font-family: 'Rubik', sans-serif
+	text-shadow: 2px 2px black
+	color: #3a3a3a
+
+.galleryThumb
+	transition: all 1s ease
+	visibility: hidden
+
+.activeImage
+	object-fit: scale-down
+	max-height: 430px !important
+	max-width: calc(170vw - 1190px) !important

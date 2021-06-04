@@ -1,15 +1,24 @@
 {
-  "name": "frontent",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  }
+	"name": "frontent",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.3.19",
+		"apollo-link-http": "^1.5.17",
+		"graphql": "^15.5.0",
+		"next": "10.2.3",
+		"random": "^3.0.6",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-simple-image-viewer": "^0.0.8",
+		"swr": "^0.5.6"
+	},
+	"devDependencies": {
+		"sass": "^1.34.0"
+	}
 }
