@@ -47,6 +47,7 @@ function HomePage({ photos }) {
 		if (typeof window !== 'undefined' && photo && photo.complete) {
 			console.log('image already loaded');
 			setDisplayPhoto(true);
+			setStyle(displayCSS);
 		}
 	}, []);
 
@@ -59,7 +60,6 @@ function HomePage({ photos }) {
 			</Head>
 			<img
 				ref={image}
-				style={style}
 				// onLoad={() => imageLoaded}
 				className={styles.mainImage}
 				src={

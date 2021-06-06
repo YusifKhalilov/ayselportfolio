@@ -110,7 +110,7 @@ function GalleryMini() {
 					<img
 						className={styles.galleryThumb}
 						onLoad={() => displayThumb(index)}
-						style={style}
+						// style={style}
 						src={serverURL + (photo?.formats?.[size]?.url || '')}
 					/>
 				</div>
