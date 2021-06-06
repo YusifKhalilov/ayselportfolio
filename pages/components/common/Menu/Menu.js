@@ -17,7 +17,7 @@ function Menu() {
 			<Link href="/gallery">
 				<a className={styles.menuElem}>Gallery</a>
 			</Link>
-			<Link href="/gallery">
+			<Link href="/contact">
 				<a className={styles.menuElem}>Contact Me</a>
 			</Link>
 			<Link href="http://instagram.com">

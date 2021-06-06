@@ -1,20 +1,25 @@
 /* -------------------------------- PACKAGES -------------------------------- */
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 /* --------------------------------- STYLES --------------------------------- */
 import styles from './HomePage.module.sass';
 
 function HomePage({ photos }) {
 	// const [photoUrl, setPhotoUrl] = useState('');
-	const [displayPhoto, setDisplayPhoto] = useState('');
+	const [displayPhoto, setDisplayPhoto] = useState(false);
 	// declaration variables
-	let style = {};
+	const [style, setStyle] = useState({
+		visibility: 'hidden',
+		opacity: 0,
+	});
 	// const databaseURL = process.env.NEXT_PUBLIC_DATABASE_URL;
 	const serverURL = process.env.NEXT_PUBLIC_SERVER_URL;
+	const image = useRef(null);
 
 	/* --------------------------------- RENDER --------------------------------- */
 
 	const imageLoaded = () => {
+		console.log('uploaded');
 		setDisplayPhoto(true);
 	};
 
@@ -29,7 +34,21 @@ function HomePage({ photos }) {
 	};
 
 	// set style for displaying animation
-	style = { ...(displayPhoto ? displayCSS : hideCSS) };
+	useEffect(() => {
+		if (displayPhoto) {
+			setStyle(displayCSS);
+		} else {
+			setStyle(hideCSS);
+		}
+	}, [displayPhoto]);
+
+	useEffect(() => {
+		const photo = image.current;
+		if (typeof window !== 'undefined' && photo && photo.complete) {
+			console.log('image already loaded');
+			setDisplayPhoto(true);
+		}
+	}, []);
 
 	return (
 		<div className={styles.homePage}>
@@ -39,8 +58,9 @@ function HomePage({ photos }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<img
+				ref={image}
 				style={style}
-				onLoad={imageLoaded}
+				// onLoad={() => imageLoaded}
 				className={styles.mainImage}
 				src={
 					serverURL + '/uploads/large_main_Photo_min_94786d656e.jpeg'
