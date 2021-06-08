@@ -13,7 +13,7 @@ function HomePage({ photos }) {
 		opacity: 0,
 	});
 	// const databaseURL = process.env.NEXT_PUBLIC_DATABASE_URL;
-	const serverURL = process.env.NEXT_PUBLIC_SERVER_URL;
+	const mainPhotoURL = process.env.NEXT_PUBLIC_MAIN_PHOTO_URL;
 	const image = useRef(null);
 
 	/* --------------------------------- RENDER --------------------------------- */
@@ -60,11 +60,8 @@ function HomePage({ photos }) {
 			</Head>
 			<img
 				ref={image}
-				// onLoad={() => imageLoaded}
 				className={styles.mainImage}
-				src={
-					serverURL + '/uploads/large_main_Photo_min_94786d656e.jpeg'
-				}
+				src={mainPhotoURL}
 				alt="main page background image"
 			/>
 			<h1 className={styles.h1}>Aysel</h1>

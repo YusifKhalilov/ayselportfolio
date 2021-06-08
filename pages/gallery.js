@@ -108,7 +108,7 @@ function gallery() {
 				style={displayPhoto ? displayCSS : hideCSS}
 				onLoad={onLoadImage}
 				className={styles.mainImage}
-				src={serverURL + photoURL || ''}
+				src={photoURL || ''}
 				alt="gallery image"
 			/>
 			<GalleryMini />

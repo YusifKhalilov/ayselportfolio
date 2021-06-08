@@ -99,7 +99,7 @@ function GalleryMini() {
 
 			if (index === large.index) {
 				size = index === large.index ? large.size : 'thumbnail';
-				// style = { ...style, ...activeImage };
+				style = { ...style, ...activeImage };
 			}
 
 			return (
@@ -111,7 +111,7 @@ function GalleryMini() {
 						className={styles.galleryThumb}
 						onLoad={() => displayThumb(index)}
 						// style={style}
-						src={serverURL + (photo?.formats?.[size]?.url || '')}
+						src={photo?.formats?.[size]?.url || ''}
 					/>
 				</div>
 			);
@@ -130,7 +130,7 @@ function GalleryMini() {
 
 	useEffect(() => {
 		const largeImageURLs = thumbData?.map((image, url) => {
-			return serverURL + image?.formats?.large?.url;
+			return image?.formats?.large?.url || '';
 		});
 		setLargeImageURLData(largeImageURLs);
 	}, [thumbData]);
