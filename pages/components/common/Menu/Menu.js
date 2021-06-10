@@ -19,7 +19,7 @@ function Menu() {
 	return (
 		<nav className={styles.navigator}>
 			<Link href="/">
-				<a className={styles.menuElem + ' ' + styles.active}>Home</a>
+				<a className={styles.menuElem}>Home</a>
 			</Link>
 			<Link href="/gallery">
 				<a className={styles.menuElem}>Gallery</a>
