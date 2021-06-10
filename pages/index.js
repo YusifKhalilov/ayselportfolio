@@ -9,6 +9,7 @@ export default function Home() {
 		<>
 			<Menu />
 			<HomePage />
+			{/* <Contact /> */}
 		</>
 	);
 }

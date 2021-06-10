@@ -1,0 +1,111 @@
+.contactContainer
+	display: flex
+	width: 100vw
+	height: 100vh
+	justify-content: center
+	align-items: center
+	color: white
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 99
+	background: #00000093
+
+.contactForm
+	border: 1px solid #ffffff2f
+	min-width: 100px
+	min-height: 100px
+	border-radius: 20px
+	overflow: hidden
+	background-color: rgba(255, 255, 255, 0.2)
+	backdrop-filter: blur(4px)
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+
+.header
+	font-family: 'Raleway', sans-serif
+	font-weight: normal
+	margin: 20px
+	color: black
+	text-shadow: 1px 1px 5px #ffffff85
+
+.messages
+	width: 300px
+	height: 150px
+	max-width: 100%
+	background: black
+	color: white
+	padding: 10px
+	max-height: 200px
+	margin: 20px 0 0
+	outline: none
+	border: 1px solid #ffffff2f
+	border-radius: 8px
+	&:hover, &:focus
+		border: 1px solid #ffffff8a
+
+.email, .name
+	// font-family: 'Raleway', sans-serif
+	font-family: monospace
+	width: 145px
+	height: 30px
+	background: black
+	color: white
+	padding: 10px 10px 10px 27px
+	outline: none
+	border: 1px solid #ffffff2f
+	border-radius: 8px
+	position: relative
+	text-overflow: ellipsis
+	&:hover, &:focus
+		border: 1px solid #ffffff8a
+
+.name
+	margin-right: 10px
+
+.button
+	font-family: monospace
+	width: 300px
+	margin: 20px 0 0
+	height: 40px
+	border: 1px solid #ffffff2f
+	color: white
+	background: black
+	padding: 10px
+	border-radius: 8px
+	cursor: pointer
+	&:hover, &:focus
+		border: 1px solid #ffffff8a
+
+.send
+	font-size: 12px
+	height: 12px
+	width: 20px
+
+.nameIcon, .emailIcon
+	// position: absolute
+	// top: 0
+	// left: 0
+	width: 20px
+	height: 12px
+	// padding-left: 20px
+
+.closeIcon
+	width: 30px
+	height: 30px
+	float: right
+	margin-top: 3px
+	color: #a31b1b
+	&:hover
+		cursor: pointer
+
+.label
+	position: absolute
+	background: black
+	z-index: 1
+	margin: 7px 5px
+
+.contactFormBody
+	width: 100%
+	padding: 20px
+	background: black
+	border-top: 1px dashed #ffffff9e

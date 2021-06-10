@@ -6,6 +6,7 @@ import random from 'random';
 import React, { useEffect, useState } from 'react';
 import useSWR from 'swr';
 // components
+import Contact from './components/common/Contact/Contact';
 import Menu from './components/common/Menu/Menu';
 import GalleryMini from './components/modules/Gallery/GalleryMini';
 // styles
@@ -112,6 +113,7 @@ function gallery() {
 				alt="gallery image"
 			/>
 			<GalleryMini />
+			<Contact />
 		</div>
 	);
 }

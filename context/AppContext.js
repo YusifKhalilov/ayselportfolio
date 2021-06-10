@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 const AppContext = React.createContext();
 
 function AppMainProvider({ children }) {
 	// Context state
-	const [isGalleryActive, setIsGalleryActive] = useState(false);
-	const databaseURL = process.env.NEXT_PUBLIC_DATABASE_URL;
+	const [selectedMenu, setSelectedMenu] = useState('home');
+	const [isContactFormActive, setIsContactFormActive] = useState(true);
 
 	// Provide Context to children components
 	return (
 		<AppContext.Provider
 			value={{
-				isGalleryActive,
-				setIsGalleryActive,
+				selectedMenu,
+				setSelectedMenu,
+				isContactFormActive,
+				setIsContactFormActive,
 			}}>
 			{children}
 		</AppContext.Provider>
@@ -24,6 +26,8 @@ AppMainProvider.propTypes = {
 	children: PropTypes.any,
 };
 
-export default AppContext;
+export default function useAppContext() {
+	return useContext(AppContext);
+}
 
 export { AppMainProvider };

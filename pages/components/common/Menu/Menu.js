@@ -2,12 +2,19 @@
 // packages
 import Link from 'next/link';
 import React, { useState } from 'react';
+// import AppContext from '../../../../context/AppContext';
 // styles
 import styles from './Menu.module.sass';
 
 /* ----------------------------- MENU COMPONENT ----------------------------- */
 function Menu() {
 	const [menu, setMenu] = useState('home');
+	// const { setIsContactFormActive } = AppContext;
+
+	const changeMenu = (name) => {
+		setMenu(name);
+		// setIsContactFormActive(true);
+	};
 
 	return (
 		<nav className={styles.navigator}>
@@ -17,8 +24,12 @@ function Menu() {
 			<Link href="/gallery">
 				<a className={styles.menuElem}>Gallery</a>
 			</Link>
-			<Link href="/contact">
-				<a className={styles.menuElem}>Contact Me</a>
+			<Link href="#">
+				<a
+					onClick={() => changeMenu('home')}
+					className={styles.menuElem}>
+					Contact Me
+				</a>
 			</Link>
 			<Link href="http://instagram.com">
 				<a className={styles.menuElem}>
