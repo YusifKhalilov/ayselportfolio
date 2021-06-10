@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 // context
 // import AppContext from '../../../../context/AppContext';
-import styles from './contact.module.sass';
+import styles from './Contact.module.sass';
 
 // display header blurry background and form body background in black
 function Contact() {
