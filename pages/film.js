@@ -2,8 +2,8 @@ import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import client from '../apollo-client';
 // components
-import Menu from './components/common/Menu/Menu';
-import FilmList from './components/modules/Film/FilmList';
+import Menu from '../app/components/common/Menu/Menu';
+import FilmList from '../app/components/modules/Film/FilmList';
 // styles
 import styles from './film.module.sass';
 
