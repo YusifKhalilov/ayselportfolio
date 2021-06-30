@@ -1,18 +1,18 @@
 .galleryMiniMain
+	z-index: 4
 	background: #171818
 	position: absolute
 	bottom: 0
 	left: 0
 	right: 0
 	width: 100vw
-	max-height: 100px
+	max-height: 80px
+	height: calc( 100vh -  80px)
 	overflow-y: scroll
 	text-align: center
 	padding: 25px 20px 50px
 	border-radius: 30px 30px 0 0
 	transition: max-height 1s ease
-	&:hover
-		max-height: calc( 100vh -  120px)
 
 .thumbs
 	display: inline-block
@@ -48,3 +48,16 @@
 	object-fit: scale-down
 	max-height: 430px !important
 	max-width: calc(170vw - 1190px) !important
+
+.closeIcon
+	color: red
+	display: inline-block
+	position: absolute
+	right:60px
+	width: 25px
+	height: 25px
+	transition: all 1s ease
+	box-shadow: 0px 0px 0px rgba(255, 0, 0, 0.3)
+	&:hover
+		box-shadow: 0px 0px 10px 1px rgb(255, 0, 64)
+		cursor: pointer

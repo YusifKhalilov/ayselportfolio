@@ -1,33 +1,33 @@
 import PropTypes from 'prop-types';
 import React, { useContext, useState } from 'react';
 
-const AppContext = React.createContext();
+const GalleryContext = React.createContext();
 
-function AppMainProvider({ children }) {
+function GalleryContextProvider({ children }) {
 	// Context state
-	const [selectedMenu, setSelectedMenu] = useState('home');
-	const [isContactFormActive, setIsContactFormActive] = useState(true);
+	const [galleryName, setGalleryName] = useState('');
+	const [galleryImages, setGalleryImages] = useState([]);
 
 	// Provide Context to children components
 	return (
-		<AppContext.Provider
+		<GalleryContext.Provider
 			value={{
-				selectedMenu,
-				setSelectedMenu,
-				isContactFormActive,
-				setIsContactFormActive,
+				galleryName,
+				setGalleryName,
+				galleryImages,
+				setGalleryImages,
 			}}>
 			{children}
-		</AppContext.Provider>
+		</GalleryContext.Provider>
 	);
 }
 
-AppMainProvider.propTypes = {
+GalleryContextProvider.propTypes = {
 	children: PropTypes.any,
 };
 
-export default function useAppContext() {
-	return useContext(AppContext);
+export default function useGalleryContext() {
+	return useContext(GalleryContext);
 }
 
-export { AppMainProvider };
+export { GalleryContextProvider };

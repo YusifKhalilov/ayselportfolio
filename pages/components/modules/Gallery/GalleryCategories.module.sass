@@ -1,0 +1,46 @@
+.categories
+	position: absolute
+	z-index: 2
+	width: 100vw
+	height: 100vh
+	color: black
+	text-align: center
+	padding-top: 100px
+
+.loading
+	position: absolute
+	top: 50%
+	left: 50%
+	transform:translate(-50%, -50%)
+
+
+.category
+	width: 300px
+	height: 500px
+	overflow: hidden
+	object-fit: cover
+	background-size: cover
+	background-position: center
+	display: inline-block
+	position: relative
+	border-radius: 10px
+	margin: 20px 30px
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px
+	transition: all 0.5s ease
+	&:hover
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+		cursor: pointer
+
+.categoryName
+	width: 100%
+	background-color: rgba(255, 255, 255, .15)
+	backdrop-filter: blur(5px)
+	padding: 10px
+	position: absolute
+	bottom: 0
+	left: 0
+	color: rgba(255,255,255, 0.4)
+	font-family: 'Raleway', sans-serif
+	font-size: 16px
+	font-weight: normal
+	text-align: left

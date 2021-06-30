@@ -24,6 +24,17 @@ function Menu() {
 			<Link href="/gallery">
 				<a className={styles.menuElem}>Gallery</a>
 			</Link>
+			<Link href="/film">
+				<a className={styles.menuElem}>Film</a>
+			</Link>
+			<Link href="https://werkenbijdefensie.nl/vlieger#start">
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					className={styles.menuElem}>
+					Commercial
+				</a>
+			</Link>
 			<Link href="#">
 				<a
 					onClick={() => changeMenu('home')}
@@ -31,7 +42,7 @@ function Menu() {
 					Contact Me
 				</a>
 			</Link>
-			<Link href="http://instagram.com">
+			<Link href="https://www.facebook.com/aysel.zeynalova.96">
 				<a className={styles.menuElem}>
 					<svg
 						width="20px"
@@ -61,7 +72,7 @@ function Menu() {
 					</svg>
 				</a>
 			</Link>
-			<Link href="http://facebook.com">
+			<Link href="https://www.facebook.com/aysel.zeynalova.96">
 				<a className={styles.menuElem}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
