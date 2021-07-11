@@ -9,19 +9,12 @@ function FilmList() {
 	const [videoList, setVideoList] = useState([]);
 
 	const videoIdExtractor = (url) => {
-		console.log(
-			`🚀 ~ file: FilmList.js ~ line 12 ~ videoIdExtractor ~ url`,
-			url,
-		);
 		let video_id = url?.split('v=')[1] || '';
 		const ampersandPosition = video_id?.indexOf('&');
 		if (ampersandPosition != -1) {
 			video_id = video_id.substring(0, ampersandPosition);
 		}
-		console.log(
-			`🚀 ~ file: FilmList.js ~ line 19 ~ videoIdExtractor ~ video_id`,
-			video_id,
-		);
+
 		return video_id;
 	};
 
@@ -44,7 +37,6 @@ function FilmList() {
 
 	const renderVideoList = () => {
 		return videoList?.map((video, index) => {
-			console.log('link', video.youTubeVideoLink);
 			const url = videoIdExtractor(video.youTubeVideoLink);
 			return (
 				<div key={'film' + index}>

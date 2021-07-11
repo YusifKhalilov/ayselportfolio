@@ -22,7 +22,6 @@ export default function Home({ dataList }) {
 		<ApolloProvider client={client}>
 			<Menu />
 			<HomePage />
-			{/* <Contact /> */}
 		</ApolloProvider>
 	);
 }

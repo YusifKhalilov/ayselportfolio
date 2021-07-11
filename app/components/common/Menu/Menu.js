@@ -27,20 +27,11 @@ function Menu() {
 			<Link href="/film">
 				<a className={styles.menuElem}>Film</a>
 			</Link>
-			<Link href="https://werkenbijdefensie.nl/vlieger#start">
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					className={styles.menuElem}>
-					Commercial
-				</a>
+			<Link href="/commercials">
+				<a className={styles.menuElem}>Commercials</a>
 			</Link>
-			<Link href="#">
-				<a
-					onClick={() => changeMenu('home')}
-					className={styles.menuElem}>
-					Contact Me
-				</a>
+			<Link href="/contact">
+				<a className={styles.menuElem}>Contact Me</a>
 			</Link>
 			<Link href="https://www.facebook.com/aysel.zeynalova.96">
 				<a className={styles.menuElem}>

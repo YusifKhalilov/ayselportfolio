@@ -4,8 +4,6 @@
 import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import client from '../apollo-client';
-// components
-import Contact from '../app/components/common/Contact/Contact';
 import Menu from '../app/components/common/Menu/Menu';
 import GalleryCategories from '../app/components/modules/Gallery/GalleryCategories';
 import GalleryMini from '../app/components/modules/Gallery/GalleryMini';
@@ -22,7 +20,6 @@ function gallery({ categoriesList }) {
 					<Menu />
 					<GalleryCategories />
 					<GalleryMini />
-					<Contact />
 				</div>
 			</ApolloProvider>
 		</GalleryContextProvider>
