@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 import Menu from '../app/components/common/Menu/Menu';
 // context
 // import AppContext from '../../../../context/AppContext';
-import styles from './Contact.module.sass';
+import styles from './contact.module.sass';
 
 // display header blurry background and form body background in black
 function Contact() {
