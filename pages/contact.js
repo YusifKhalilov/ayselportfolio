@@ -23,11 +23,13 @@ function Contact() {
 	const [message, setMessage] = useState('');
 	const [isSending, setIsSending] = useState(false);
 	const [buttonText, setButtonText] = useState('Send Message');
-	const [errorMessage, setErrorMessage] = useState('s');
+	const [errorMessage, setErrorMessage] = useState(
+		'Correct EMail is required.',
+	);
 
 	// validate email
 	useEffect(() => {
-		if (email !== '' && !isEmail(email)) {
+		if (!isEmail(email)) {
 			setErrorMessage('Correct EMail is required.');
 		} else {
 			setErrorMessage('');
@@ -123,7 +125,10 @@ function Contact() {
 							onChange={(e) => setMessage(e.target.value)}
 						/>
 						<br />
-						<button onClick={sendEmail} className={styles.button}>
+						<button
+							onClick={sendEmail}
+							disabled={true}
+							className={styles.button}>
 							<motion.span
 								initial="noShow"
 								animate="show"
