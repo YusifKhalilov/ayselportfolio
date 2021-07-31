@@ -18,8 +18,8 @@ export default function handler(req, res) {
 	const mailOptions = {
 		from: email,
 		to: 'ayselkarim8@gmail.com',
-		subject: `Website contact email from ${fullName}`,
-		text: message,
+		subject: `Website contact email from ${fullName} - ${email}`,
+		text: message + ' ' + email,
 	};
 
 	transporter.sendMail(mailOptions, function (error, info) {
