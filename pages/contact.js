@@ -44,6 +44,7 @@ function Contact() {
 	};
 
 	const sendEmail = async () => {
+		console.log('Sending email');
 		setIsSending(true);
 		setButtonText('Sending');
 		await axios
@@ -127,7 +128,7 @@ function Contact() {
 						<br />
 						<button
 							onClick={sendEmail}
-							disabled={true}
+							disabled={false}
 							className={styles.button}>
 							<motion.span
 								initial="noShow"

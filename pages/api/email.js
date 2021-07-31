@@ -6,9 +6,7 @@ import nodemailer from 'nodemailer';
 export default function handler(req, res) {
 	const { message, fullName, email } = req.body;
 	const userName = process.env.EMAIL_USERNAME;
-	console.log(`🚀 ~ file: email.js ~ line 9 ~ handler ~ userName`, userName);
 	const pass = process.env.EMAIL_PASSWORD;
-	console.log(`🚀 ~ file: email.js ~ line 11 ~ handler ~ pass`, pass);
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
@@ -18,8 +16,8 @@ export default function handler(req, res) {
 	});
 
 	const mailOptions = {
-		from: 'Girlfromsurakhany@gmail.com',
-		to: email,
+		from: email,
+		to: 'ayselkarim8@gmail.com',
 		subject: `Website contact email from ${fullName}`,
 		text: message,
 	};
