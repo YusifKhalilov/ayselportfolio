@@ -15,11 +15,13 @@ export default function handler(req, res) {
 		},
 	});
 
+	const message_ = message + ' ' + email;
+
 	const mailOptions = {
 		from: email,
 		to: 'ayselkarim8@gmail.com',
-		subject: `Website contact email from ${fullName} - ${email}`,
-		text: message + ' ' + email,
+		subject: `Website contact email from ${fullName}`,
+		text: message_,
 	};
 
 	transporter.sendMail(mailOptions, function (error, info) {
