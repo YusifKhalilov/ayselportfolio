@@ -58,7 +58,6 @@ const Card = () => {
 
 	const renderCommercials = () => {
 		return commercialsList?.map((commercial, index) => {
-			console.log(commercial?.commercialUrl);
 			return (
 				<div
 					onClick={() =>

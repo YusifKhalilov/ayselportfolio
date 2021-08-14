@@ -18,6 +18,7 @@
 		"framer-motion": "^4.1.17",
 		"graphql": "^15.5.0",
 		"graphql-request": "^3.4.0",
+		"html-react-parser": "^1.2.8",
 		"next": "10.2.3",
 		"nodemailer": "^6.6.3",
 		"random": "^3.0.6",

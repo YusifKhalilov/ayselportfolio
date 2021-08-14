@@ -30,10 +30,13 @@ function Menu() {
 			<Link href="/commercials">
 				<a className={styles.menuElem}>Commercials</a>
 			</Link>
+			<Link href="/bio">
+				<a className={styles.menuElem}>Bio</a>
+			</Link>
 			<Link href="/contact">
 				<a className={styles.menuElem}>Contact Me</a>
 			</Link>
-			<Link href="https://www.facebook.com/aysel.zeynalova.96">
+			<Link href="https://www.instagram.com/aysel.karim/">
 				<a className={styles.menuElem}>
 					<svg
 						width="20px"
